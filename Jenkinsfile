@@ -6,7 +6,7 @@ pipeline {
         sh "sshpass -p '1234' ssh -o StrictHostKeyChecking=no con@63.33.204.134"
         sh "mkdir -p /tmp/targetfolder"
         sh "cd /tmp/targetfolder && rm -rf test && git clone https://github.com/billyogendo/test.git"
-        sh "chmod +x test.sh && ./test.sh && echo $BUILD_NUMBER"
+        sh "chmod +x test.sh && ./test.sh && echo $TICKET_NUMBER"
         
         
      }
