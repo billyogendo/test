@@ -1,5 +1,5 @@
 #!/bin/bash
-sh 'export AWESOME_FILE=the_file'
+export AWESOME_FILE=the_file
 export BUILD_NUMBER=BASTION_123
 export TICKET_NUMBER="1234"
 export BUILD_ID="BASTION_1.2.3."
