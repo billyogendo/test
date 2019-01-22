@@ -7,7 +7,7 @@ pipeline {
         sh "mkdir -p /tmp/targetfolder"
         sh "cd /tmp/targetfolder && rm -rf test && git clone https://github.com/billyogendo/test.git && cd test && cat test.sh"
         sh 'echo $AWESOME_FILE'
-        sh "chmod +x test.sh && ./test.sh && echo $BUILD_NUMBER"
+        
         
         
      }
