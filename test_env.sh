@@ -1,4 +1,4 @@
 #!/bin/bash
-echo 'export VM_NAME="$JOB_NAME"' 
+echo 'export VM_NAME="$BUILD_VERSION"' 
 echo "export AOEU=$(echo aoeu)" 
 
