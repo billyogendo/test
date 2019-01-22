@@ -1,7 +1,4 @@
 #!/bin/bash
-
-echo "# Saving some version properties
-BUILD_VERSION=${BuildVersion}
-BUILD_NODE_NAME=${NODE_NAME}
-SOURCE_JOB=${JOB_NAME}
-" > ${WORKSPACE}/BuildVersion.properties
+echo 'export VM_NAME="$JOB_NAME"' > ~/load_env.sh
+echo "export AOEU=$(echo aoeu)" >> ~/load_env.sh
+chmod 750 ~/load_env.sh
