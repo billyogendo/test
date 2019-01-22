@@ -1,4 +1,5 @@
 #!/bin/bash
+env.some_var = 'AAAA'
 export AWESOME_FILE='the_file'
 export BUILD_NUMBER='BASTION_123'
 export TICKET_NUMBER="1234"
