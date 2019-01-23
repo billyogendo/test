@@ -7,6 +7,8 @@ pipeline {
         sh "mkdir -p /tmp/targetfolder"
         sh "cd /tmp/targetfolder && rm -rf test && git clone https://github.com/billyogendo/test.git"
         load "/tmp/targetfolder/test/test_env.sh"
+        echo "${env.DB_URL}"
+        echo "${env.DB_URL2}"
         
                 
         
