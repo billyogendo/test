@@ -10,6 +10,7 @@ pipeline {
         echo "${env.TARGET_HOST}"
         echo "${env.BUILD_DISPLAY_NAME}"
         echo "${env.BUILD_ID}"
+        echo "${env.TICKET_NUMBER}"
         echo "${env.DB_URL}"
         echo "${env.DB_URL2}"
         echo "$JENKINS_HOME"
