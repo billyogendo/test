@@ -1,5 +1,6 @@
 #!/bin/bash
 env.REMOTE_HOST="'1234' ssh -o StrictHostKeyChecking=no con@52.212.57.196"
+env.DIR="/tmp/targetfolder"
 env.BUILD_NUMBER="BASTION_123"
 env.TICKET_NUMBER="1234"
 env.BUILD_ID="BASTION_1.2.3."
