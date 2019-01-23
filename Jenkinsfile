@@ -4,7 +4,7 @@ pipeline {
     stage('connect ssh and remove files') {
       steps {
         load "$JENKINS_HOME/workspace/test/test_env.sh"
-        sh "sshpass -p ${env.REMOTE_HOST}" 
+        sh "sshpass -p ${env.TARGET_HOST}" 
         sh "mkdir -p ${env.DIR}"
         sh "cd ${env.DIR} && rm -rf test && git clone https://github.com/billyogendo/test.git"
         echo "${env.TARGET_HOST}"
