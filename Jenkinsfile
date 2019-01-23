@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('connect ssh and remove files') {
+    stage('connect to remote host') {
       steps {
         load "$JENKINS_HOME/workspace/test/test_env.sh"
         sh "sshpass -p ${env.TARGET_HOST}" 
