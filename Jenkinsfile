@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('connect ssh and remove files') {
       steps {
-        sh "git clone https://github.com/billyogendo/test.git"
+        
       
         sh "sshpass -p '1234' ssh -o StrictHostKeyChecking=no con@52.212.57.196" 
         sh "mkdir -p /tmp/targetfolder"
