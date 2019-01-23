@@ -7,8 +7,7 @@ pipeline {
         sh "mkdir -p /tmp/targetfolder"
         sh "cd /tmp/targetfolder && rm -rf test && git clone https://github.com/billyogendo/test.git"
         sh "source ~/load_env.sh"
-        sh "echo $JOB_NAME "
-        EOF
+        sh "echo $JOB_NAME " EOF
                 
         
         
