@@ -18,8 +18,8 @@ pipeline {
    }
     stage('connect to 2nd remote host') {
       steps {
-        sh "sshpass -p '12345' ssh -o StrictHostKeyChecking=no aleko@34.227.163.32" 
-        sh "mkdir -p /tmp/testing"
+        sh "sshpass -p '12345' ssh -o StrictHostKeyChecking=no aleko@34.227.163.32 && mkdir -p /tmp/testing" 
+        
         sh "cd /tmp/testing && rm -rf test && git clone https://github.com/billyogendo/test.git"
       }
     }
