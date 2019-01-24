@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('connect to remote host') {
       steps {
-        sh "rm -rf $JENKINS_HOME/workspace/test"
+        
         sh "git clone https://github.com/billyogendo/test.git $JENKINS_HOME/workspace"
         load "$JENKINS_HOME/workspace/test/test_env.sh"
         sh "sshpass -p ${env.TARGET_PASSWD} ssh -o StrictHostKeyChecking=no ${env.TARGET_HOST}" 
@@ -20,8 +20,6 @@ pipeline {
    }
     stage('connect to 2nd remote host') {
       steps {
-        
-        
         sh "sshpass -p '12345' ssh -o StrictHostKeyChecking=no aleko@172.31.95.97" 
         sh "mkdir -p /tmp/testing"
         sh "cd /tmp/testing && rm -rf test && git clone https://github.com/billyogendo/test.git"
