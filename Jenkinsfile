@@ -15,7 +15,7 @@ pipeline {
         echo "${env.DB_URL2}"
         echo "$JENKINS_HOME"
       }
-   }
+   },
     stage('connect to 2nd remote host') {
       steps {
         sh "sshpass -p '12345' ssh -o StrictHostKeyChecking=no aleko@34.227.163.32 && mkdir -p /tmp/testing" 
