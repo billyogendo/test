@@ -2,7 +2,7 @@
 env.BUILD_NUMBER="BASTION_123"
 env.TICKET_NUMBER="1234"
 env.BUILD_ID="BASTION_1.2.3."
-env.TARGET_HOST="con@52.212.57.196"
+env.TARGET_HOST="con@172.31.17.52"
 env.TARGET_PASSWD="1234"
 env.BUILD_DISPLAY_NAME="test"
 env.DIR="/tmp/targetfolder"
