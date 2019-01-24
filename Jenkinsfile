@@ -16,13 +16,17 @@ pipeline {
         echo "${env.DB_URL}"
         echo "${env.DB_URL2}"
         echo "$JENKINS_HOME"
-        
-        
-               
-        
-        
-     }
+      }
    }
+    stage('connect to 2nd remote host') {
+      steps {
+        sh "git clone https://github.com/billyogendo/test.git"
+        load "$JENKINS_HOME/workspace/test/test_env.sh"
+        sh "sshpass -p '12345' ssh -o StrictHostKeyChecking=no aleko@172.31.95.97" 
+        sh "mkdir -p /tmp/testing"
+        sh "cd /tmp/testing && rm -rf test && git clone https://github.com/billyogendo/test.git"
+      }
+    }
  }
 }
 
